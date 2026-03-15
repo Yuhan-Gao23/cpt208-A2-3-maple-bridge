@@ -13,90 +13,161 @@
       color: #222;
       line-height: 1.6;
     }
-    h1, h2 {
+
+    h1, h2, h3 {
       color: #4b2e83;
+      margin-top: 0;
     }
+
     .section {
       background: white;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 24px;
+      margin-bottom: 24px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
-    .member, .persona {
+
+    .members-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .member-card {
       border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 10px;
-      margin-top: 15px;
+      border-radius: 12px;
+      padding: 16px;
+      background: #fafafa;
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
     }
-    img {
-      width: 120px;
-      height: 120px;
+
+    .member-card img {
+      width: 110px;
+      height: 110px;
       object-fit: cover;
       border-radius: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .persona-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .persona-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 18px;
+      background: #fafafa;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #e9ddff;
+      color: #4b2e83;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .project-intro p {
+      margin: 8px 0;
+    }
+
+    @media (max-width: 900px) {
+      .members-grid,
+      .persona-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .member-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="section">
+  <div class="section project-intro">
     <h1>CPT208 Group Project</h1>
     <p><strong>Project Theme:</strong> A2 Suzhou Grand Canal – Maple Bridge</p>
-    <p><strong>Project Idea:</strong> A mobile onsite interactive experience for Maple Bridge with two modes: Quick Explore and Deep Explore.</p>
+    <p><strong>Project Idea:</strong> A mobile onsite interactive experience for Maple Bridge using XR, GenAI, and location-based storytelling.</p>
+    <p><strong>Modes:</strong> Quick Explore for visitors and Deep Explore for local residents/students.</p>
   </div>
 
   <div class="section">
     <h2>Group Members</h2>
+    <div class="members-grid">
 
-    <div class="member">
-  <img src="member1.jpg" alt="Profile picture of Your Name">
-  <p><strong>Name:</strong> Your Name</p>
-  <p><strong>Student ID:</strong> 2254XXX</p>
-  <p><strong>Brief Introduction:</strong> I am interested in HCI, storytelling, and digital heritage.</p>
-</div>
+      <div class="member-card">
+        <img src="member1.jpg" alt="Member 1 photo">
+        <div>
+          <h3>Member 1 Name</h3>
+          <p><strong>Student ID:</strong> 2254XXX</p>
+          <p><strong>Brief Introduction:</strong> I am interested in HCI, digital heritage, and interactive storytelling.</p>
+        </div>
+      </div>
 
-    <div class="member">
-  <img src="member1.jpg" alt="Profile picture of Your Name">
-  <p><strong>Name:</strong> Your Name</p>
-  <p><strong>Student ID:</strong> 2254XXX</p>
-  <p><strong>Brief Introduction:</strong> I am interested in HCI, storytelling, and digital heritage.</p>
-</div>
+      <div class="member-card">
+        <img src="member2.jpg" alt="Member 2 photo">
+        <div>
+          <h3>Member 2 Name</h3>
+          <p><strong>Student ID:</strong> 2254XXX</p>
+          <p><strong>Brief Introduction:</strong> I am interested in UI/UX design and visual communication.</p>
+        </div>
+      </div>
 
-    <div class="member">
-  <img src="member1.jpg" alt="Profile picture of Your Name">
-  <p><strong>Name:</strong> Your Name</p>
-  <p><strong>Student ID:</strong> 2254XXX</p>
-  <p><strong>Brief Introduction:</strong> I am interested in HCI, storytelling, and digital heritage.</p>
-</div>
+      <div class="member-card">
+        <img src="member3.jpg" alt="Member 3 photo">
+        <div>
+          <h3>Member 3 Name</h3>
+          <p><strong>Student ID:</strong> 2254XXX</p>
+          <p><strong>Brief Introduction:</strong> I am interested in front-end development and creative prototyping.</p>
+        </div>
+      </div>
 
-    <div class="member">
-  <img src="member1.jpg" alt="Profile picture of Your Name">
-  <p><strong>Name:</strong> Your Name</p>
-  <p><strong>Student ID:</strong> 2254XXX</p>
-  <p><strong>Brief Introduction:</strong> I am interested in HCI, storytelling, and digital heritage.</p>
-</div>
+      <div class="member-card">
+        <img src="member4.jpg" alt="Member 4 photo">
+        <div>
+          <h3>Member 4 Name</h3>
+          <p><strong>Student ID:</strong> 2254XXX</p>
+          <p><strong>Brief Introduction:</strong> I am interested in user research, design thinking, and project planning.</p>
+        </div>
+      </div>
 
-  <div class="section">
-    <h2>Persona 1 – Quick Explore User</h2>
-    <div class="persona">
-      <p><strong>Name:</strong> Lin, 21</p>
-      <p><strong>Type:</strong> Out-of-town visitor</p>
-      <p><strong>Goal:</strong> Quickly understand why Maple Bridge is important and enjoy an engaging onsite experience.</p>
-      <p><strong>Needs:</strong> Short explanations, visual AR content, easy interaction, fast understanding.</p>
-      <p><strong>Pain Points:</strong> Traditional heritage sites often feel text-heavy and difficult to connect with.</p>
-      <p><strong>Preferred Mode:</strong> Quick Explore</p>
     </div>
   </div>
 
   <div class="section">
-    <h2>Persona 2 – Deep Explore User</h2>
-    <div class="persona">
-      <p><strong>Name:</strong> Yuhan, 20</p>
-      <p><strong>Type:</strong> Local student</p>
-      <p><strong>Goal:</strong> Explore the deeper historical and cultural significance of Maple Bridge.</p>
-      <p><strong>Needs:</strong> Rich historical context, layered information, AI Q&A, detailed stories.</p>
-      <p><strong>Pain Points:</strong> Existing site visits often lack depth and do not explain the site beyond famous poems.</p>
-      <p><strong>Preferred Mode:</strong> Deep Explore</p>
+    <h2>Personas</h2>
+    <div class="persona-grid">
+
+      <div class="persona-card">
+        <div class="tag">Quick Explore</div>
+        <h3>Lin, 21</h3>
+        <p><strong>Type:</strong> Out-of-town visitor</p>
+        <p><strong>Background:</strong> Lin is visiting Suzhou for the first time with friends. She has heard of the poem “Night Mooring at Maple Bridge” but does not know much about the historical meaning of the site.</p>
+        <p><strong>Goals:</strong> Quickly understand why Maple Bridge is important and enjoy an engaging onsite experience.</p>
+        <p><strong>Needs:</strong> Short explanations, visual AR content, easy interaction, and fast understanding.</p>
+        <p><strong>Frustrations:</strong> Heritage sites often feel text-heavy, and she finds it hard to connect the current place with its historical significance.</p>
+      </div>
+
+      <div class="persona-card">
+        <div class="tag">Deep Explore</div>
+        <h3>Yuhan, 20</h3>
+        <p><strong>Type:</strong> Local student</p>
+        <p><strong>Background:</strong> Yuhan is a university student in Suzhou. He already knows Maple Bridge as a cultural symbol, but wants to understand its deeper historical role in the Grand Canal system.</p>
+        <p><strong>Goals:</strong> Explore the layered history and cultural identity of Maple Bridge in greater depth.</p>
+        <p><strong>Needs:</strong> Rich historical context, AI Q&A, detailed story layers, and deeper interpretation of the site.</p>
+        <p><strong>Frustrations:</strong> Existing visits often focus only on the famous poem and do not explain why Maple Bridge mattered historically.</p>
+      </div>
+
     </div>
   </div>
 
